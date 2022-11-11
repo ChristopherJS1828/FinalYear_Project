@@ -1,0 +1,57 @@
+.header{
+  background: lightblue;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem calc();
+  z-index: 12;
+}
+
+.logoHeader{
+  display: flex;
+}
+
+button{
+  border-radius: 10px;
+  background: red;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+
+/* CSS */
+.button-1 {
+  background-color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  transform: translateY(50%);
+  margin-right: 10px;
+}
+
+.button-2 {
+  background-color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  transform: translateY(50%);
+  margin-right: 10px;
+}
+
+.button-1:hover,
+.button-1:focus,
+.button-2:hover,
+.button-2:focus {
+  background-color: #4b4848;
+}
+.logoName{
+  text-align: center;
+  text-decoration: underline;
+}
