@@ -7,9 +7,19 @@ import sad from '../images/sad.jpg'
 import okay from '../images/okay.jpg'
 import happy from '../images/happy.jpg'
 import veryhappy from '../images/veryhappy.jpg'
+import { getUser, removeUserSession } from '../Utils/Common';
 
 
-const HomePage = () => {
+function HomePage(props) {
+  const user = getUser();
+ 
+  // handle click event of logout button
+  const handleLogout = () => {  
+    removeUserSession();  
+    // props.history.push('/pages/Login');
+    navigate("/pages/Login");
+
+  }
   
     // const navigate = useNavigate();
     
@@ -21,10 +31,6 @@ const HomePage = () => {
     // }
 
     const navigate = useNavigate();
-
-    function LogOut(){
-        navigate("..");
-    }
   
     return (
       <div>
@@ -35,7 +41,7 @@ const HomePage = () => {
         </div>
         <h1>Welcome Back!</h1>
         <div>
-        <button className='button-2' onClick={LogOut}>Log Out</button>
+        <button className='button-2' onClick={handleLogout}>Log Out</button>
         </div>
       </div>
       <h2 className='content-q'>How are you feeling today?</h2>

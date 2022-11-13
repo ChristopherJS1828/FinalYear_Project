@@ -29,7 +29,7 @@ function SignIn() {
       console.log(error);
     });
 
-    navigate("/pages/HomePage");
+    navigate("..");
   }
 
   const [name, setName] = useState('');

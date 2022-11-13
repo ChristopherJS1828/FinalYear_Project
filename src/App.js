@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
 import SignIn from './pages/Signin';
 import LogIn from './pages/Login';
-import React from 'react';
 import "./App.css";
-import logo from './images/mood_diary_logo.png'
+import logo from './images/mood_diary_logo.png';
+import React, { useState, useEffect } from 'react';
   
 const App = () => {
   
@@ -32,7 +32,9 @@ const App = () => {
       <button className='button-2' onClick={LogIn}>Log In</button>
       </div>
     </div>
+    
     </div>
+    
   );
 };
   
