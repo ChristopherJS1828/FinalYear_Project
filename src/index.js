@@ -10,6 +10,7 @@ import PrivateRoute from './Utils/PrivateRoute';
 import PublicRoute from './Utils/PublicRoute';
 import { getToken, removeUserSession, setUserSession } from './Utils/Common';
 import axios from 'axios';
+import FeelingsDesc from './pages/FeelingsDesc';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let userLogged;
@@ -40,6 +41,7 @@ root.render(
     <Route path="/pages/Signin" element={<SignIn />}></Route>
     <Route path="/pages/Login" element={<LogIn />}></Route>
     <Route path="/pages/HomePage" element={userLogged ? <Navigate replace to="/pages/HomePage" /> : <HomePage />}></Route>
+    <Route path="/pages/FeelingsDesc" element={userLogged ? <Navigate replace to="/pages/FeelingsDesc" /> : <FeelingsDesc />}></Route>
   </Routes>
 </BrowserRouter>
 

@@ -45,15 +45,6 @@ function HomePage(props) {
         </div>
       </div>
       <h2 className='content-q'>How are you feeling today?</h2>
-      {/* <div className='content'>
-        <div>
-          <img src = {verysad}></img>
-          
-        </div>
-        <div>
-          <button className='button-2' >Very Happy</button>
-        </div>
-      </div> */}
       
       <table className='feelings'>
 		<tr>
