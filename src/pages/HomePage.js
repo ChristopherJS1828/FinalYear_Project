@@ -20,6 +20,17 @@ function HomePage(props) {
     navigate("/pages/Login");
 
   }
+
+  const submit = () => {
+    navigate("/pages/FeelingsDesc");
+  }
+  const feelingspage = () => {
+    navigate("/pages/HomePage");
+  }
+
+  const viewmoods = () => {
+    navigate("/pages/Login");
+  }
   
     // const navigate = useNavigate();
     
@@ -40,8 +51,10 @@ function HomePage(props) {
         <h1 className='logoName'>App Name</h1>
         </div>
         <h1>Welcome Back!</h1>
-        <div>
-        <button className='button-2' onClick={handleLogout}>Log Out</button>
+        <div className='topnav'>
+          <a className='active' href='' onClick={feelingspage}>Record Mood</a>
+          <a href='' onClick={viewmoods}>View Mood History</a>
+          <button className='logOutbtn' onClick={handleLogout}>Log Out</button>
         </div>
       </div>
       <h2 className='content-q'>How are you feeling today?</h2>
@@ -51,31 +64,20 @@ function HomePage(props) {
 			<td>
       <div className="content">
 				<div>
-        <img src = {veryhappy}></img>
+        <img className='face-images1' src = {veryhappy}></img>
 				</div>
 				<div>
-					<button className='button-2'>very happy</button>
+					<button className='button-words1'>very happy</button>
 				</div>
          </div>
 			</td>
       <td>
       <div className="content">
 				<div>
-        <img src = {happy}></img>
+        <img className='face-images2' src = {happy}></img>
 				</div>
 				<div>
-					<button className='button-2'>happy</button>
-				</div>
-         </div>
-			</td>
-
-      <td>
-      <div className="content">
-				<div>
-        <img src = {okay}></img>
-				</div>
-				<div>
-					<button className='button-2'>okay</button>
+					<button className='button-words2'>happy</button>
 				</div>
          </div>
 			</td>
@@ -83,10 +85,10 @@ function HomePage(props) {
       <td>
       <div className="content">
 				<div>
-        <img src = {sad}></img>
+        <img className='face-images3' src = {okay}></img>
 				</div>
 				<div>
-					<button className='button-2'>unhappy</button>
+					<button className='button-words3'>okay</button>
 				</div>
          </div>
 			</td>
@@ -94,17 +96,41 @@ function HomePage(props) {
       <td>
       <div className="content">
 				<div>
-        <img src = {verysad}></img>
+        <img className='face-images4' src = {sad}></img>
 				</div>
 				<div>
-					<button className='button-2'>very unhappy</button>
+					<button className='button-words4'>unhappy</button>
+				</div>
+         </div>
+			</td>
+
+      <td>
+      <div className="content">
+				<div>
+        <img className='face-images5' src = {verysad}></img>
+				</div>
+				<div>
+					<button className='button-words5'>very unhappy</button>
 				</div>
          </div>
 			</td>
 		</tr>
 	</table>
 
+  <div className='feelings'>
+
+      <div>
+      <input className='inputBox' type="text" id="Name"/>
       </div>
+
+      <div className='content'>
+      <div>
+        <button className='submit' onClick={submit}>submit!</button>
+      </div>
+      </div>
+
+      </div>
+    </div>
     );
   };
     

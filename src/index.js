@@ -12,6 +12,7 @@ import { getToken, removeUserSession, setUserSession } from './Utils/Common';
 import axios from 'axios';
 import FeelingsDesc from './pages/FeelingsDesc';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let userLogged;
 

@@ -28,8 +28,8 @@ function FeelingsDesc() {
         </div>
       </div> 
 
-      <div className="form-outline">
-    <textarea class="form-control" id="textAreaExample1" rows="4" ></textarea>
+      <div className="form-outline w-50 mb-4">
+    <textarea class="form-control" id="textAreaExample1" rows="8" placeholder='Tell us a little more about today :) What made you happy today? What upset you today?'></textarea>
     <label className="form-label" for="textAreaExample"></label>
     </div>
     
