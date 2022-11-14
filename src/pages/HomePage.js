@@ -58,7 +58,7 @@ function HomePage(props) {
       <table className='feelings'>
 		<tr>
 			<td>
-      <div class="content">
+      <div className="content">
 				<div>
         <img src = {veryhappy}></img>
 				</div>
@@ -68,7 +68,7 @@ function HomePage(props) {
          </div>
 			</td>
       <td>
-      <div class="content">
+      <div className="content">
 				<div>
         <img src = {happy}></img>
 				</div>
@@ -79,7 +79,7 @@ function HomePage(props) {
 			</td>
 
       <td>
-      <div class="content">
+      <div className="content">
 				<div>
         <img src = {okay}></img>
 				</div>
@@ -90,7 +90,7 @@ function HomePage(props) {
 			</td>
 
       <td>
-      <div class="content">
+      <div className="content">
 				<div>
         <img src = {sad}></img>
 				</div>
@@ -101,7 +101,7 @@ function HomePage(props) {
 			</td>
 
       <td>
-      <div class="content">
+      <div className="content">
 				<div>
         <img src = {verysad}></img>
 				</div>
