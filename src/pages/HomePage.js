@@ -120,7 +120,7 @@ function HomePage(props) {
   <div className='feelings'>
 
       <div>
-      <input className='inputBox' type="text" id="Name"/>
+      <input className='userFeelings' type="text" id="Name" placeholder='Enter your answer from one of the above here :)'/>
       </div>
 
       <div className='content'>
