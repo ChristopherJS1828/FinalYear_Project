@@ -17,11 +17,13 @@ function HomePage(props) {
   const handleLogout = () => {  
     removeUserSession();  
     // props.history.push('/pages/Login');
-    navigate("/pages/Login");
+    navigate("..");
 
   }
 
   const submit = () => {
+    let inputValue = document.getElementById("UsersMood").value;
+    localStorage.setItem("currentmood",inputValue);
     navigate("/pages/FeelingsDesc");
   }
   const feelingspage = () => {
@@ -120,7 +122,7 @@ function HomePage(props) {
   <div className='feelings'>
 
       <div>
-      <input className='userFeelings' type="text" id="Name" placeholder='Enter your answer from one of the above here :)'/>
+      <input className='userFeelings' type="text" id="UsersMood" placeholder='Enter your answer from one of the above here :)'/>
       </div>
 
       <div className='content'>

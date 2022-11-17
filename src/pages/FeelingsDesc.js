@@ -9,9 +9,19 @@ function FeelingsDesc() {
   
   const navigate = useNavigate();
   
+  console.log(localStorage.getItem("currentmood"));
+
   const handleLogout = () => {  
     removeUserSession();  
     // props.history.push('/pages/Login');
+    navigate("..");
+  }
+
+  const feelingspage = () => {
+    navigate("/pages/HomePage");
+  }
+
+  const viewmoods = () => {
     navigate("/pages/Login");
   }
 
@@ -22,11 +32,14 @@ function FeelingsDesc() {
       <img src = {logo}></img>
       <h1 className='logoName'>App Name</h1>
       </div>
-      <h1>Tell us more about your day!</h1>
-      <div>
-        <button className='button-2' onClick={handleLogout}>Log Out</button>
-        </div>
+     
+      <div className='topnav'>
+          <a className='active' href='' onClick={feelingspage}>Record Mood</a>
+          <a href='' onClick={viewmoods}>View Mood History</a>
+          <button className='logOutbtn1' onClick={handleLogout}>Log Out</button>
+      </div>
       </div> 
+      <h2 className='userFeel-q'>Feel free to tell us all about your day </h2>
 
       <div className="form-outline w-50 mb-4">
     <textarea class="form-control" id="textAreaExample1" rows="8" placeholder='Tell us a little more about today :) What made you happy today? What upset you today?'></textarea>
