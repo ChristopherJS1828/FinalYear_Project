@@ -6,11 +6,15 @@ import App from './App';
 import SignIn from './pages/Signin';
 import LogIn from './pages/Login';
 import HomePage from './pages/HomePage'
+import FeelingsDesc from './pages/FeelingsDesc';
+import UserQuestions from './pages/UserQuestions';
+import Services from './pages/Services';
 import PrivateRoute from './Utils/PrivateRoute';
 import PublicRoute from './Utils/PublicRoute';
 import { getToken, removeUserSession, setUserSession } from './Utils/Common';
 import axios from 'axios';
-import FeelingsDesc from './pages/FeelingsDesc';
+import MoodHistory from './pages/MoodHistory';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -43,6 +47,9 @@ root.render(
     <Route path="/pages/Login" element={<LogIn />}></Route>
     <Route path="/pages/HomePage" element={userLogged ? <Navigate replace to="/pages/HomePage" /> : <HomePage />}></Route>
     <Route path="/pages/FeelingsDesc" element={userLogged ? <Navigate replace to="/pages/FeelingsDesc" /> : <FeelingsDesc />}></Route>
+    <Route path="/pages/UserQuestions" element={userLogged ? <Navigate replace to="/pages/UserQuestions" /> : <UserQuestions />}></Route>
+    <Route path="/pages/Services" element={userLogged ? <Navigate replace to="/pages/Services" /> : <Services />}></Route>
+    <Route path="/pages/MoodHistory" element={userLogged ? <Navigate replace to="/pages/MoodHistory" /> : <MoodHistory />}></Route>
   </Routes>
 </BrowserRouter>
 

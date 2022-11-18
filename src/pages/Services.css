@@ -1,0 +1,149 @@
+.header{
+    background: lightblue;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem calc();
+    z-index: 12;
+  }
+  
+  .logoHeader{
+    display: flex;
+  }
+
+  .buttons-link{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content{
+    text-align: center;
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 15px;
+  }
+  
+  .userFeel-q{
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  /* CSS */
+  .button-1 {
+    background-color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 40px;
+    transform: translateY(50%);
+    margin-right: 10px;
+  }
+  
+  .button-2 {
+    background-color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 40px;
+    transform: translateY(50%);
+    margin-right: 10px;
+  }
+  
+  .button-1:hover,
+  .button-1:focus,
+  .button-2:hover,
+  .button-2:focus {
+    background-color: #4b4848;
+  }
+  .logoName{
+    text-align: center;
+    text-decoration: underline;
+  }
+
+ .form-control{
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .topnav {
+  display: flex;
+  text-align: center;
+  padding: 15px;
+}
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+.logOutbtn1{
+  background-color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  transform: translateY(20%);
+  margin-right: 10px;
+  border-radius: 10px;
+  background: black;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+/* CSS */
+.linkBtn {
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateZ(0);
+  transition: filter .2s;
+  width: 25%;
+}
+
+.linkBtn:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.linkBtn:main,
+.linkBtn:focus {
+  user-select: auto;
+}
+
+.linkBtn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.linkBtn:disabled {
+  cursor: auto;
+}

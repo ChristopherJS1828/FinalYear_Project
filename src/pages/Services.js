@@ -1,15 +1,14 @@
 import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
-import "./FeelingsDesc.css";
+import "./Services.css";
 import logo from '../images/mood_diary_logo.png';
 import React, { useState, useEffect } from 'react';
 import { getUser, removeUserSession } from '../Utils/Common';
 
   
-function FeelingsDesc() {
+function Services() {
   
   const navigate = useNavigate();
   
-  console.log(localStorage.getItem("currentmood"));
 
   const handleLogout = () => {  
     removeUserSession();  
@@ -20,12 +19,12 @@ function FeelingsDesc() {
     navigate("/pages/HomePage");
   }
 
-  const viewmoods = () => {
-    navigate("/pages/Login");
+  const moodhistory = () => {
+    navigate("/pages/MoodHistory");
   }
 
-  const services = () => {
-    navigate("/pages/Services");
+  const diaryEntry = () => {
+    navigate("/pages/FeelingsDesc");
   }
 
   return (
@@ -38,20 +37,29 @@ function FeelingsDesc() {
      
       <div className='topnav'>
           <a className='active' href='' onClick={feelingspage}>Record Mood</a>
-          <a href='' onClick={viewmoods}>Mood Log</a>
-          <a href='' onClick={services}>Services</a>
+          <a href='' onClick={moodhistory}>Mood Log</a>
           <button className='logOutbtn1' onClick={handleLogout}>Log Out</button>
       </div>
       </div> 
-      <h2 className='userFeel-q'>Feel free to tell us all about your day </h2>
+      <h2 className='userFeel-q'>This page will offer all the services we provide! </h2>
+      <div className='buttons-link'>
+      <div className='content'>
+      <button className='linkBtn' onClick={diaryEntry} >Record a Diary Entry</button>
+      </div>
+      <div className='content'>
+      <button className='linkBtn' >Listen to Music</button>
+      </div>
+      <div className='content'>
+      <button className='linkBtn' >Seek Support</button>
+      </div>
+      <div className='content'>
+      <button className='linkBtn' >About Us</button>
+      </div>
+      </div>
 
-      <div className="form-outline w-50 mb-4">
-    <textarea class="form-control" id="textAreaExample1" rows="8" placeholder='Tell us a little more about today :) What made you happy today? What upset you today?'></textarea>
-    <label className="form-label" for="textAreaExample"></label>
-    </div>
     
     </div>
   );
 };
   
-export default FeelingsDesc;
+export default Services;

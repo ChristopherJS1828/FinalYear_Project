@@ -16,7 +16,6 @@ function HomePage(props) {
   // handle click event of logout button
   const handleLogout = () => {  
     removeUserSession();  
-    // props.history.push('/pages/Login');
     navigate("..");
 
   }
@@ -24,14 +23,18 @@ function HomePage(props) {
   const submit = () => {
     let inputValue = document.getElementById("UsersMood").value;
     localStorage.setItem("currentmood",inputValue);
-    navigate("/pages/FeelingsDesc");
+    navigate("/pages/UserQuestions");
   }
   const feelingspage = () => {
     navigate("/pages/HomePage");
   }
 
-  const viewmoods = () => {
-    navigate("/pages/Login");
+  const services = () => {
+    navigate("/pages/Services");
+  }
+
+  const moodhistory = () => {
+    navigate("/pages/MoodHistory");
   }
   
     // const navigate = useNavigate();
@@ -54,8 +57,9 @@ function HomePage(props) {
         </div>
         <h1>Welcome Back!</h1>
         <div className='topnav'>
-          <a className='active' href='' onClick={feelingspage}>Record Mood</a>
-          <a href='' onClick={viewmoods}>View Mood History</a>
+          {/* <a className='active' href='' onClick={feelingspage}>Record Mood</a> */}
+          <a href='' onClick={moodhistory}>Mood Log</a>
+          <a href='' onClick={services}>Services</a>
           <button className='logOutbtn' onClick={handleLogout}>Log Out</button>
         </div>
       </div>
