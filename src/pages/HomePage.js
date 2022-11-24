@@ -21,8 +21,8 @@ function HomePage(props) {
   }
 
   const submit = () => {
-    let inputValue = document.getElementById("UsersMood").value;
-    localStorage.setItem("currentmood",inputValue);
+    // let inputValue = document.getElementById("UsersMood").value;
+    // localStorage.setItem("currentmood",inputValue);
     navigate("/pages/UserQuestions");
   }
   const feelingspage = () => {

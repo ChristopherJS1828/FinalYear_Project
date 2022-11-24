@@ -48,7 +48,21 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding:10px;
+    margin: 0 auto 10px; 
+    border:solid 2px black ;font-size:20px;
+    font-family:'Montserrat Alternates';
+    border-radius:10px;outline: none;
+    transition: box-shadow .3s ease
  }
+
+ .form-control:-ms-input-placeholder {color: black}
+ .form-control::-moz-placeholder {color: black}
+ .form-control::-webkit-input-placeholder {color: lightblue}
+
+ /* .form-control:focus{2px solid #2d303a91} */
+ .form-control:focus,
+ .form-control:hover{box-shadow:0px 0px 13px 0px lightblue}
 
  .topnav {
   display: flex;
@@ -84,4 +98,22 @@
 .userFeel-q{
   text-align: center;
   text-decoration: underline;
+}
+
+.saveDiaryEntry{
+  border-radius: 10px;
+  padding: 10px 30px;
+  font-size: 20px;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  background-color: lightblue;
+  text-align: center;
+  justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

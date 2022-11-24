@@ -60,13 +60,6 @@
     text-decoration: underline;
   }
 
- .form-control{
-    justify-content: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
- }
-
  .topnav {
   display: flex;
   text-align: center;

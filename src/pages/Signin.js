@@ -15,7 +15,6 @@ function SignIn() {
 
   }
 
-
   function Submit(){
     axios.post("http://localhost:8000/SignUp", {
       "Name": name,
