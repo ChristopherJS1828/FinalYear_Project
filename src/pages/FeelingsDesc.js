@@ -2,8 +2,9 @@ import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react
 import "./FeelingsDesc.css";
 import logo from '../images/mood_diary_logo.png';
 import React, { useState, useEffect } from 'react';
-import { getUser, removeUserSession } from '../Utils/Common';
+import { getUser, getUserId, removeUserSession } from '../Utils/Common';
 import axios from 'axios';
+import { get } from 'jquery';
 
 
 function FeelingsDesc() {
@@ -13,8 +14,12 @@ function FeelingsDesc() {
   // console.log(localStorage.getItem("currentmood"));
 
   function SaveDiaryEntry(){
+    const user = JSON.parse(sessionStorage.getItem('user'));
+    const userId = user.userId;
+
     axios.post("http://localhost:8000/FeelingsDesc", {
-      "DiaryEntry": diaryentry
+      "DiaryEntry": diaryentry,
+      "UserId": userId
     })
     .then(function (response) {
         console.log("success!")
@@ -23,7 +28,7 @@ function FeelingsDesc() {
       console.log(error);
     });
 
-    navigate("/pages/HomePage");
+    // navigate("/pages/HomePage");
   }
   const [diaryentry, setEntry] = useState('');
 
@@ -46,7 +51,7 @@ function FeelingsDesc() {
   }
 
   const viewmoods = () => {
-    navigate("/pages/Login");
+    navigate("/pages/MoodHistory");
   }
 
   const services = () => {

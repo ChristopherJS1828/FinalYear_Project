@@ -25,6 +25,12 @@ function UserQuestions() {
 
     // console.log(localStorage.getItem("currentmood"));
 
+    // function SaveDiaryEntry(){
+    //     const user = JSON.parse(sessionStorage.getItem('user'));
+    //     const userId = user.userId;
+    //     console.log(userId);
+    // }
+
     const surveyJson = {
 
         pages: [{
@@ -115,14 +121,25 @@ function UserQuestions() {
             
             const surveyData = JSON.parse(JSON.stringify(survey.getPlainData()));
 
+
+            
+            const user = JSON.parse(sessionStorage.getItem('user'));
+            const userId = user.userId;
+
+
+
             let numOfQ = 7;
             let questionnaireData = {}
             console.log(survey.getPlainData());
             for(let i = 0; i < numOfQ; i++){
                 questionnaireData[i] = surveyData[i].displayValue;
             }
+
+            questionnaireData["UserId"] = userId;
+
             axios
-            .post("http://localhost:8000/UserQuestions",questionnaireData)
+            .post("http://localhost:8000/UserQuestions",questionnaireData,{
+            })
             .then(function (response) 
             {
                 navigate("/pages/FeelingsDesc");

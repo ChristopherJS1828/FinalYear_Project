@@ -5,41 +5,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import { setUserSession } from '../Utils/Common';
   
-// function LogIn() {
-
-//   const navigate = useNavigate();
-  
-//   function Cancel(){
-
-//     navigate("..");
-
-//   }
-
-
-  // function LogIn(){
-  //   axios.get("http://localhost:8000/User", {
-  //     "Email": email,
-  //     "Password": password
-  //   })
-  //   .then(function (response) {
-  //       console.log("success!")
-  //     })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
-
-  //   navigate("/pages/HomePage");
-  // }
-
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
-
-  // const handleChange = event => {
-  //   console.log(event.target.id);
-  //   let elementID = event.target.id;
-  // };
-
 
   function LogIn(props) {
     const email = useFormInput('');
