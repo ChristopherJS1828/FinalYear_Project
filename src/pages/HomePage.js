@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
 import React from 'react';
 import "./HomePage.css";
-import logo from '../images/mood_diary_logo.png'
+import logo from '../images/website_logo.png';
 import verysad from '../images/verysad.jpg'
 import sad from '../images/sad.jpg'
 import okay from '../images/okay.jpg'
@@ -53,7 +53,7 @@ function HomePage(props) {
         <div className='header'>
         <div className='logoHeader'>
         <img src = {logo}></img>
-        <h1 className='logoName'>App Name</h1>
+        {/* <h1 className='logoName'>App Name</h1> */}
         </div>
         <h1>Welcome Back!</h1>
         <div className='topnav'>

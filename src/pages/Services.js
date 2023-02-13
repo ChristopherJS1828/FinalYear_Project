@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
 import "./Services.css";
-import logo from '../images/mood_diary_logo.png';
+import logo from '../images/website_logo.png';
 import React, { useState, useEffect } from 'react';
 import { getUser, removeUserSession } from '../Utils/Common';
 
@@ -32,7 +32,7 @@ function Services() {
       <div className='header'>
         <div className='logoHeader'>
       <img src = {logo}></img>
-      <h1 className='logoName'>App Name</h1>
+      {/* <h1 className='logoName'>App Name</h1> */}
       </div>
      
       <div className='topnav'>

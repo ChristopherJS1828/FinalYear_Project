@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
 import "./FeelingsDesc.css";
-import logo from '../images/mood_diary_logo.png';
+import logo from '../images/website_logo.png';
 import React, { useState, useEffect } from 'react';
 import { getUser, getUserId, removeUserSession } from '../Utils/Common';
 import axios from 'axios';
@@ -14,12 +14,14 @@ function FeelingsDesc() {
   // console.log(localStorage.getItem("currentmood"));
 
   function SaveDiaryEntry(){
-    const user = JSON.parse(sessionStorage.getItem('user'));
+    // const user = JSON.parse(sessionStorage.getItem('user'));
+    const user = getUser();
     const userId = user.userId;
 
     axios.post("http://localhost:8000/FeelingsDesc", {
       "DiaryEntry": diaryentry,
-      "UserId": userId
+      "UserId": userId,
+      "Date": new Date()
     })
     .then(function (response) {
         console.log("success!")
@@ -63,7 +65,7 @@ function FeelingsDesc() {
       <div className='header'>
         <div className='logoHeader'>
           <img src={logo}></img>
-          <h1 className='logoName'>App Name</h1>
+          {/* <h1 className='logoName'>App Name</h1> */}
         </div>
 
         <div className='topnav'>

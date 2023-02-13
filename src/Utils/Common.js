@@ -4,6 +4,17 @@ export const getUser = () => {
     if (userStr) return JSON.parse(userStr);
     else return null;
   }
+
+  // return the user data from the session storage
+export const getUserId = () => {
+  const user = getUser();
+  if (user) return user.userId;
+  else return null;
+}
+
+export const getDiaries = () => {
+  // console.log(getDiaryEntries)
+}
    
   // return the token from the session storage
   export const getToken = () => {
