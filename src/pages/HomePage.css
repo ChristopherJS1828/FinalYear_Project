@@ -27,7 +27,7 @@
   }
     
   /* CSS */
-  .button-1 {
+  /* .button-1 {
     background-color: black;
     border-radius: 8px;
     cursor: pointer;
@@ -35,19 +35,17 @@
     height: 40px;
     transform: translateY(50%);
     margin-right: 10px;
-  }
+  } */
   
   .button-words1,
-  .button-words2,
-  .button-words3,
-  .button-words4,
-  .button-words5 {
+  .button-words2{
     border-radius: 10px;
     padding: 10px 30px;
+    font-size: 20px;
     color: white;
     border: none;
     outline: none;
-    /* cursor: pointer; */
+    cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
   }
@@ -57,7 +55,7 @@
   .button-words2{
     background-color: rgb(41, 255, 41);
   }
-  .button-words3{
+  /* .button-words3{
     background-color: rgb(255, 205, 112);
   }
   .button-words4{
@@ -65,7 +63,7 @@
   }
   .button-words5{
     background-color: red;
-  }
+  } */
   
   .button-1:hover,
   .button-1:focus,
@@ -74,33 +72,22 @@
     background-color: #4b4848;
   }
 
-  .face-images1,
-  .face-images2,
-  .face-images3,
-  .face-images4,
-  .face-images5{
+  .diary-entry,
+  .mood-entry{
     border: 3px solid;
     border-color: rgb(255, 116, 66);
     border-radius: 10%;
-    padding: 20px 20px;
+    padding: 30px 30px;
+    cursor: pointer;
   }
-  .face-images1{
+  .diary-entry{
     border-color: green;
   }
-  .face-images2{
+  .mood-entry{
     border-color:rgb(41, 255, 41);
   }
-  .face-images3{
-    border-color:rgb(255, 205, 112);
-  }
-  .face-images4{
-    border-color:rgb(255, 102, 46);
-  }
-  .face-images5{
-    border-color:red;
-  }
-
-  .submit{
+  
+  /* .submit{
     border-radius: 10px;
     padding: 10px 30px;
     font-size: 20px;
@@ -114,7 +101,7 @@
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-  }
+  } */
 
   .logoName{
     text-align: center;
@@ -130,7 +117,13 @@
   text-align: center;
   /* display: flex;
   justify-content: space-between; */
-  padding: 20px;
+  padding: 25px;
+  /* border-radius: 10px; */
+  border: 3px solid;
+  border-color: black;
+  max-width: 90%;
+  height: auto;
+  
 }
 
 .content-q{

@@ -2,16 +2,14 @@ import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react
 import React from 'react';
 import "./HomePage.css";
 import logo from '../images/website_logo.png';
-import verysad from '../images/verysad.jpg'
-import sad from '../images/sad.jpg'
-import okay from '../images/okay.jpg'
-import happy from '../images/happy.jpg'
-import veryhappy from '../images/veryhappy.jpg'
+import moodentry from '../images/mood-monitoring.png'
+import diaryentry from '../images/diary-entry.png'
 import { getUser, removeUserSession } from '../Utils/Common';
 
 
 function HomePage(props) {
   const user = getUser();
+  const userName = user ? user.name : "";
  
   // handle click event of logout button
   const handleLogout = () => {  
@@ -47,17 +45,25 @@ function HomePage(props) {
     // }
 
     const navigate = useNavigate();
+
+    const diaryEntry = () => {
+      navigate("../pages/FeelingsDesc")
+    }
+
+    const moodEntry = () => {
+      navigate("../pages/UserQuestions")
+    }
   
     return (
       <div>
         <div className='header'>
         <div className='logoHeader'>
         <img src = {logo}></img>
-        {/* <h1 className='logoName'>App Name</h1> */}
+        {/* <h1>Welcome Back {userName}!</h1> */}
         </div>
-        <h1>Welcome Back!</h1>
+        <h1>Welcome Back {userName}!</h1>
         <div className='topnav'>
-          {/* <a className='active' href='' onClick={feelingspage}>Record Mood</a> */}
+          
           <a href='' onClick={moodhistory}>Mood Log</a>
           <a href='' onClick={services}>Services</a>
           <button className='logOutbtn' onClick={handleLogout}>Log Out</button>
@@ -70,64 +76,30 @@ function HomePage(props) {
 			<td>
       <div className="content">
 				<div>
-        <img className='face-images1' src = {veryhappy}></img>
+        <h2> Record Your Diary Entry For Today!</h2>
+        <img className='diary-entry' onClick={diaryEntry} src = {diaryentry}></img>
 				</div>
 				<div>
-					<button className='button-words1'>very happy</button>
+					<button onClick={diaryEntry} className='button-words1'>Record Diary Entry</button>
 				</div>
          </div>
 			</td>
       <td>
       <div className="content">
 				<div>
-        <img className='face-images2' src = {happy}></img>
+        <h2> Record Your Mood Entry For Today!</h2>
+        <img className='mood-entry' onClick={moodEntry} src = {moodentry}></img>
 				</div>
 				<div>
-					<button className='button-words2'>happy</button>
-				</div>
-         </div>
-			</td>
-
-      <td>
-      <div className="content">
-				<div>
-        <img className='face-images3' src = {okay}></img>
-				</div>
-				<div>
-					<button className='button-words3'>okay</button>
-				</div>
-         </div>
-			</td>
-
-      <td>
-      <div className="content">
-				<div>
-        <img className='face-images4' src = {sad}></img>
-				</div>
-				<div>
-					<button className='button-words4'>unhappy</button>
-				</div>
-         </div>
-			</td>
-
-      <td>
-      <div className="content">
-				<div>
-        <img className='face-images5' src = {verysad}></img>
-				</div>
-				<div>
-					<button className='button-words5'>very unhappy</button>
+					<button onClick={moodEntry} className='button-words2'>Record Mood Entry</button>
 				</div>
          </div>
 			</td>
 		</tr>
 	</table>
 
-  <div className='feelings'>
+  {/* <div className='feelings'>
 
-      <div>
-      <input className='userFeelings' type="text" id="UsersMood" placeholder='Enter your answer from one of the above here :)'/>
-      </div>
 
       <div className='content'>
       <div>
@@ -135,7 +107,7 @@ function HomePage(props) {
       </div>
       </div>
 
-      </div>
+      </div> */}
     </div>
     );
   };

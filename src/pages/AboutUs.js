@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
-import "./Services.css";
+import "./AboutUs.css";
 import logo from '../images/website_logo.png';
 import React, { useState, useEffect } from 'react';
 import { getUser, removeUserSession } from '../Utils/Common';
 
   
-function Services() {
+function AboutUs() {
   
   const navigate = useNavigate();
   
@@ -23,12 +23,8 @@ function Services() {
     navigate("/pages/MoodHistory");
   }
 
-  const diaryEntry = () => {
-    navigate("/pages/FeelingsDesc");
-  }
-
-  const aboutUs = () => {
-    navigate("/pages/AboutUs");
+  const services = () => {
+    navigate("/pages/Services");
   }
 
   return (
@@ -41,31 +37,14 @@ function Services() {
      
       <div className='topnav'>
           <a className='active' href='' onClick={feelingspage}>Record Mood</a>
+          <a href='' onClick={services}>Services</a>
           <a href='' onClick={moodhistory}>Mood Log</a>
           <button className='logOutbtn1' onClick={handleLogout}>Log Out</button>
       </div>
       </div> 
-      <h2 className='userFeel-q'>This page will offer all the services we provide! </h2>
-      <div className='buttons-link'>
-      <div className='content-services'>
-      <button className='linkBtn' onClick={diaryEntry} >Record a Diary Entry</button>
-      </div>
-      <div className='content-services'>
-      <button className='linkBtn' >Listen to Music</button>
-      </div>
-      <div className='content-services'>
-      <a href = "https://www.maynoothuniversity.ie/campus-life/student-wellbeing-support/counselling">
-      <button className='linkBtn'  >Seek Support</button>
-      </a>
-      </div>
-      <div className='content-services'>
-      <button className='linkBtn' onClick={aboutUs}>About Us</button>
-      </div>
-      </div>
-
-    
+      <h2 className='userFeel-q'>This page is the about us page! </h2>
     </div>
   );
 };
   
-export default Services;
+export default AboutUs;
