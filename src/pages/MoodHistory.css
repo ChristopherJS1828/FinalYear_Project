@@ -1,0 +1,30 @@
+.table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: lightblue;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.table td, .table th{
+  border: 2px solid black;
+  padding: 8px;
+}
+
+.wrapper{
+    padding: 10px;
+}
+
+.logoHeader{
+  cursor: pointer;
+}

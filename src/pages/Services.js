@@ -35,12 +35,12 @@ function Services() {
     <div>
       <div className='header'>
         <div className='logoHeader'>
-      <img src = {logo}></img>
+      <img src = {logo} onClick={feelingspage}></img>
       {/* <h1 className='logoName'>App Name</h1> */}
       </div>
      
       <div className='topnav'>
-          <a className='active' href='' onClick={feelingspage}>Record Mood</a>
+          <a className='active' href='' onClick={feelingspage}>Home Page</a>
           <a href='' onClick={moodhistory}>Mood Log</a>
           <button className='logOutbtn1' onClick={handleLogout}>Log Out</button>
       </div>
@@ -48,14 +48,23 @@ function Services() {
       <h2 className='userFeel-q'>This page will offer all the services we provide! </h2>
       <div className='buttons-link'>
       <div className='content-services'>
-      <button className='linkBtn' onClick={diaryEntry} >Record a Diary Entry</button>
-      </div>
-      <div className='content-services'>
+      <a href= "https://www.youtube.com/music"> 
       <button className='linkBtn' >Listen to Music</button>
+      </a>
       </div>
       <div className='content-services'>
       <a href = "https://www.maynoothuniversity.ie/campus-life/student-wellbeing-support/counselling">
-      <button className='linkBtn'  >Seek Support</button>
+      <button className='linkBtn'  >Consult a Professional</button>
+      </a>
+      </div>
+      <div className='content-services'>
+      <a href = "https://niteline.ie/">
+      <button className='linkBtn'  >College Student Support</button>
+      </a>
+      </div>
+      <div className='content-services'>
+      <a href = "https://text50808.ie/how-it-works?gclid=CjwKCAiAu5agBhBzEiwAdiR5tLHc885mrn7vB8xiQ5RVyj_FzLMdimUnTesip4Up29kRSqGY8G0FdxoChrQQAvD_BwE">
+      <button className='linkBtn'  >24/7 Hotline Support</button>
       </a>
       </div>
       <div className='content-services'>

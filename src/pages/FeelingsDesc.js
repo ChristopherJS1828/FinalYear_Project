@@ -24,7 +24,9 @@ function FeelingsDesc() {
       "Date": new Date()
     })
     .then(function (response) {
-        console.log("success!")
+        console.log("success!");
+        alert("You have succesfully recorded a diary entry! You will now be redirected back to the Home Page, thank you!");
+        navigate("/pages/HomePage");
       })
     .catch(function (error) {
       console.log(error);
@@ -59,6 +61,18 @@ function FeelingsDesc() {
   const services = () => {
     navigate("/pages/Services");
   }
+ 
+  
+
+  // function popUpMessage(){
+  //   var userPreference;
+
+	// 		if (window.confirm("Do you want to save changes?") == true) {
+	// 			userPreference = "Data saved successfully!";
+	// 		} else {
+	// 			userPreference = "Save Canceled!";
+	// 		}
+  // }
 
   return (
     <div>

@@ -17,6 +17,15 @@ import { setUserSession } from '../Utils/Common';
           navigate("..");     
         }
 
+        function showPassword() {
+          var x = document.getElementById("myInput");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+
     // handle button click of login form
     const handleLogin = () => {
       setError(null);
@@ -27,7 +36,8 @@ import { setUserSession } from '../Utils/Common';
       navigate("/pages/HomePage");
     }).catch(error => {
       setLoading(false);
-      if (error.response.status === 401) setError(error.response.data.message);
+      // if (error.response.status === 401) setError(error.response.data.message);
+      if (error.response.status === 401) alert("One or both fields do not match the credentials of a existing account, please try again!");
       else setError("Something went wrong. Please try again later.");
     });
     }
@@ -41,8 +51,10 @@ import { setUserSession } from '../Utils/Common';
       <input className="inputBox" type="text" {...email}/>
       </label>
       <label><b>Password</b>
-      <input className="inputBox" type="text" {...password}/>
+      <input className="inputBox" type="password" id='myInput' {...password}/>
       </label>
+      <input type="checkbox" onClick={showPassword}/>Show Password
+
 
       <button className='loginbtn' type="submit" onClick={handleLogin}>Log In</button>
     </div>

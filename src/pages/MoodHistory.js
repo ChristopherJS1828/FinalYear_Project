@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
 import "./Services.css";
+import "./MoodHistory.css";
 import logo from '../images/website_logo.png';
 import React, { useState, useEffect } from 'react';
 import { getUser, getUserId, removeUserSession } from '../Utils/Common';
@@ -74,39 +75,40 @@ function MoodHistory() {
       </div>
      <h1>{userName}'s Mood Log</h1>
       <div className='topnav'>
-          <a className='active' href='' onClick={feelingspage}>Record Mood</a>
+          <a className='active' href='' onClick={feelingspage}>Home Page</a>
           <a href='' onClick={services}>Services</a>
           <button className='logOutbtn1' onClick={handleLogout}>Log Out</button>
       </div>
       </div> 
-      <h2 className='userFeel-q'>This is where the users moods will be shown</h2>
-      <div className="container">
-            <h3 className="p-3 text-center">React - Display a list of items</h3>
-            <table className="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Diary Entry</th>
+      <div className="wrapper">
+      <h2 className='userFeel-q'>Diary Entry Recordings Table</h2>
+            <table className="table">
+                
+                    <tr className='rowHeader'>                     
+                        <th>Date Of Entry</th>
+                        <th>Diary Entry</th>                       
                     </tr>
-                </thead>
+                
                 <tbody>
                     {diaries && diaries.map(entry =>
                         <tr key={entry._id}>
-                          < td>
+                          < td className='row'>
                             <Moment format="DD-MM-YYYY">
                               {entry.Date}
                             </Moment>
                           </td>
-                          < td>{entry.DiaryEntry}</td>
+                          < td className='row'>{entry.DiaryEntry}</td>
                         </tr>
                 
                     )}
                 </tbody>
             </table>
-            <table className="table table-striped table-bordered">
-                <thead>
+            </div>
+            <div className="wrapper">
+            <h2 className='userFeel-q'>Mood Entry Recordings Table</h2>
+            <table className="table">
                     <tr>
-                        <th>Date</th>
+                        <th>Date Of Entry</th>
                         <th>Current Mood</th>
                         <th>Activities</th>
                         <th>Positives</th>
@@ -114,7 +116,6 @@ function MoodHistory() {
                         <th>Negatives</th>
                         <th>Day Talk</th>
                     </tr>
-                </thead>
                 <tbody>
                      {moods && moods.map(mood =>
                         <tr key={mood._id}>

@@ -5,6 +5,7 @@
   justify-content: space-between;
   padding: 0.2rem calc();
   z-index: 12;
+  overflow: hidden;
 }
 
 .logoHeader{
@@ -12,51 +13,99 @@
 }
 
 /* CSS */
-.button-1 {
-  background-color: black;
-  border-radius: 8px;
-  cursor: pointer;
+.button-signup {
   font-size: 14px;
   height: 40px;
   transform: translateY(50%);
   margin-right: 10px;
   border-radius: 10px;
-  background: red;
+  background: black;
   padding: 10px 30px;
   color: white;
   border: none;
-  outline: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  text-decoration: none;
 }
 
-.button-2 {
-  background-color: black;
-  border-radius: 8px;
-  cursor: pointer;
+.button-login {
   font-size: 14px;
   height: 40px;
   transform: translateY(50%);
   margin-right: 10px;
   border-radius: 10px;
-  background: red;
+  background: black;
   padding: 10px 30px;
   color: white;
   border: none;
-  outline: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  text-decoration: none;
 }
 
-.button-1:hover,
-.button-1:focus,
-.button-2:hover,
-.button-2:focus {
+.button-signup:hover,
+.button-signup:focus,
+.button-login:hover,
+.button-login:focus {
   background-color: #4b4848;
 }
 .logoName{
   text-align: center;
   text-decoration: underline;
+}
+
+.body-image{
+  width: 350px;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: lightblue;
+  /* max-width: 100%;
+  height: auto; */
+}
+
+.below-header{
+  padding: 10px;
+}
+
+.body{
+  display: flex;
+  justify-content: center;
+}
+
+
+ul {
+  border: 5px solid lightblue;
+  border-radius: 10px;
+  padding: .5em;
+  width: 95%;
+}
+
+li {
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: .5em;
+  text-align: center;
+  background-color: lightblue;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+p{
+  font-size: large;
+  font-weight: bold;
+}
+
+.infopic{
+  width: 100px;
+}
+
+.time{
+  font-size: larger;
+  transform: translateY(25%);
+  font-weight: bold;
 }

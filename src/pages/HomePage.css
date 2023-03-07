@@ -75,16 +75,17 @@
   .diary-entry,
   .mood-entry{
     border: 3px solid;
-    border-color: rgb(255, 116, 66);
     border-radius: 10%;
     padding: 30px 30px;
     cursor: pointer;
   }
   .diary-entry{
-    border-color: green;
+    border-color: black;
+    width: 100px;
   }
   .mood-entry{
-    border-color:rgb(41, 255, 41);
+    border-color:black;
+    width: 100px;
   }
   
   /* .submit{
@@ -115,15 +116,14 @@
 
 .content{
   text-align: center;
-  /* display: flex;
-  justify-content: space-between; */
   padding: 25px;
-  /* border-radius: 10px; */
+  border-radius: 10px;
   border: 3px solid;
   border-color: black;
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
-  
+  text-align: center;
+  text-decoration: underline;
 }
 
 .content-q{
