@@ -21,11 +21,6 @@
   padding: 8px;
 }
 
-.page-container{
-  min-width: 765px;
-}
-
-
 .wrapper{
     padding: 10px;
 }
@@ -77,4 +72,9 @@
 .welcome-message{
   text-decoration: underline;
   text-align: left;
+  white-space: nowrap;
+}
+
+.page-container{
+  min-width: 1035px;
 }

@@ -1,79 +1,70 @@
-import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import "./FeelingsDesc.css";
 import logo from '../images/website_logo.png';
-import React, { useState, useEffect } from 'react';
-import { getUser, getUserId, removeUserSession } from '../Utils/Common';
+import React, { useState } from 'react';
+import { getUser, removeUserSession } from '../Utils/Common';
 import axios from 'axios';
-import { get } from 'jquery';
+
 
 
 function FeelingsDesc() {
-
+  
+  //sets useNavigate to use to navigate to other pages
   const navigate = useNavigate();
 
-  // console.log(localStorage.getItem("currentmood"));
-
+ //function that saves diary entry
   function SaveDiaryEntry(){
-    // const user = JSON.parse(sessionStorage.getItem('user'));
-    const user = getUser();
-    const userId = user.userId;
+    const user = getUser();//retrieves logged in user
+    const userId = user.userId;//retrives users userId
 
+    //posts diary entry to the database
     axios.post("http://localhost:8000/FeelingsDesc", {
-      "DiaryEntry": diaryentry,
-      "UserId": userId,
-      "Date": new Date()
+      "DiaryEntry": diaryentry, //posts users diary entry
+      "UserId": userId, //posts users userID
+      "Date": new Date() //posts current date of submission
     })
+    //if submits successfully, following will happen
     .then(function (response) {
-        console.log("success!");
+      //pop up message alerting user about succesful submission
         alert("You have succesfully recorded a diary entry! You will now be redirected back to the Home Page, thank you!");
         navigate("/pages/HomePage");
       })
+      //if submission is not succesful
     .catch(function (error) {
-      console.log(error);
+      console.log(error); 
     });
-
-    // navigate("/pages/HomePage");
   }
   const [diaryentry, setEntry] = useState('');
-
+  //keeps track of what is inputted within text box for diary entry
   const handleChange = event => {
     console.log(event.target.id);
     let elementID = event.target.id;
 
+    //stores diary entry text within setEntry which gets
+    //stored within diaryentry const used in post function
     if(elementID === "DiaryEntry"){
       setEntry(event.target.value);
     }
   };
 
+  //logs user out, navigates to landing page
   const handleLogout = () => {
     removeUserSession();
     navigate("..");
   }
-
+  //navigates to homepage
   const feelingspage = () => {
     navigate("/pages/HomePage");
   }
-
+  //navigates to mood history page
   const viewmoods = () => {
     navigate("/pages/MoodHistory");
   }
-
+  //navigates to services page
   const services = () => {
     navigate("/pages/Services");
   }
  
-  
-
-  // function popUpMessage(){
-  //   var userPreference;
-
-	// 		if (window.confirm("Do you want to save changes?") == true) {
-	// 			userPreference = "Data saved successfully!";
-	// 		} else {
-	// 			userPreference = "Save Canceled!";
-	// 		}
-  // }
-
   return (
     <div>
       <div className='header'>

@@ -19,6 +19,8 @@ import { getToken, removeUserSession, setUserSession } from './Utils/Common';
 import axios from 'axios';
 import MoodHistory from './pages/MoodHistory';
 import AboutUs from './pages/AboutUs';
+import AboutUsLanding from './pages/AboutUsLanding'
+import MoodEntries from './pages/MoodEntries'
 
 
 
@@ -75,7 +77,9 @@ root.render(
     <Route path="/pages/UserQuestions" element={<ProtectedRoute><UserQuestions /></ProtectedRoute>}></Route>
     <Route path="/pages/Services" element={<ProtectedRoute><Services /></ProtectedRoute>}></Route>
     <Route path="/pages/MoodHistory" element={<ProtectedRoute><MoodHistory /></ProtectedRoute>}></Route>
+    <Route path="/pages/MoodEntries" element={<ProtectedRoute><MoodEntries /></ProtectedRoute>}></Route>
     <Route path="/pages/AboutUs" element={<ProtectedRoute><AboutUs /></ProtectedRoute>}></Route>
+    <Route path="/pages/AboutUsLanding" element={<UnProtectedRoute><AboutUsLanding /></UnProtectedRoute>}></Route>
   </Routes>
 </BrowserRouter>
 

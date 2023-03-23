@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import "./HomePage.css";
 import logo from '../images/website_logo.png';
@@ -7,107 +7,82 @@ import diaryentry from '../images/diary-entry.png'
 import { getUser, removeUserSession } from '../Utils/Common';
 
 
-function HomePage(props) {
-  const user = getUser();
-  const userName = user ? user.name : "";
+function HomePage() {
+  const user = getUser(); //retrives user
+  const userName = user ? user.name : ""; //retrieves user name to be used in header
  
-  // handle click event of logout button
+  // logs user out, removes token
   const handleLogout = () => {  
     removeUserSession();  
     navigate("..");
 
   }
 
-  const submit = () => {
-    // let inputValue = document.getElementById("UsersMood").value;
-    // localStorage.setItem("currentmood",inputValue);
-    navigate("/pages/UserQuestions");
-  }
-  const feelingspage = () => {
-    navigate("/pages/HomePage");
-  }
-
+  //navigates to services pages
   const services = () => {
     navigate("/pages/Services");
   }
 
+  //navigates to mood history page
   const moodhistory = () => {
     navigate("/pages/MoodHistory");
   }
-  
-    // const navigate = useNavigate();
-    
-    // function Test(){
-    //   navigate("/pages/Signin");
-    // }
-    // function LogIn(){
-    //   navigate("/pages/Login");
-    // }
 
+    //sets useNavigate to use to navigate to other pages
     const navigate = useNavigate();
-
+    
+    //navigates to record diary entry
     const diaryEntry = () => {
       navigate("../pages/FeelingsDesc")
     }
-
+    
+    //navigates to record a mood entry
     const moodEntry = () => {
       navigate("../pages/UserQuestions")
     }
   
     return (
-      <div>
+      //Website Header and content
+      <div className="page-container">
         <div className='header'>
         <div className='logoHeader'>
         <img src = {logo}></img>
-        {/* <h1>Welcome Back {userName}!</h1> */}
         </div>
-        <h1>Welcome Back {userName}!</h1>
+        <h1>Welcome {userName}!</h1>
         <div className='topnav'>
           
-          <a href='' onClick={moodhistory}>Mood Log</a>
+          <a href='' onClick={moodhistory}>Mood History</a>
           <a href='' onClick={services}>Services</a>
           <button className='logOutbtn' onClick={handleLogout}>Log Out</button>
         </div>
       </div>
-      <h2 className='content-q'>How are you feeling today?</h2>
-      
+      <h2 className='content-q'>Which of the following two features would you like to use?</h2>
       <table className='feelings'>
 		<tr>
 			<td>
       <div className="content">
 				<div>
-        <h2> Record Your Diary Entry For Today!</h2>
+        <h2> Record A Diary Entry About Your Day!</h2>
         <img className='diary-entry' onClick={diaryEntry} src = {diaryentry}></img>
 				</div>
 				<div>
-					<button onClick={diaryEntry} className='button-words1'>Record Diary Entry</button>
+					<button onClick={diaryEntry} className='record-diary'>Record Diary Entry</button>
 				</div>
          </div>
 			</td>
       <td>
       <div className="content">
 				<div>
-        <h2> Record Your Mood Entry For Today!</h2>
+        <h2> Record A Mood Entry About Your Day!</h2>
         <img className='mood-entry' onClick={moodEntry} src = {moodentry}></img>
 				</div>
 				<div>
-					<button onClick={moodEntry} className='button-words2'>Record Mood Entry</button>
+					<button onClick={moodEntry} className='record-mood'>Record Mood Entry</button>
 				</div>
          </div>
 			</td>
 		</tr>
 	</table>
-
-  {/* <div className='feelings'>
-
-
-      <div className='content'>
-      <div>
-        <button className='submit' onClick={submit}>submit!</button>
-      </div>
-      </div>
-
-      </div> */}
     </div>
     );
   };

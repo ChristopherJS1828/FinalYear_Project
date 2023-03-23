@@ -16,15 +16,13 @@
     margin-right: auto;
   }
 
-  .content-services{
+  .content{
     text-align: center;
-    /* display: flex;
-    justify-content: space-between; */
     padding: 15px;
   }
   
-  .services-header{
-    text-align: center;
+  .userFeel-q{
+    text-align: left;
     text-decoration: underline;
   }
 
@@ -141,6 +139,47 @@
   cursor: auto;
 }
 
+.aboutusLanding-image{
+  max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+}
+
+.meraki-meaning{
+
+  text-align: center;
+  font-size: medium;
+}
+.medi-meaning{
+  font-size: medium;
+  text-align: center;
+}
+
+p::first-line {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.aboutus-body{
+  border: 2px solid black;
+  float: left;
+}
+
+.aboutus-bodyright{
+  border: 2px solid black;
+  float: right;
+}
+
+.ul{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .page-container{
   min-width: 500px;
 }
+
+

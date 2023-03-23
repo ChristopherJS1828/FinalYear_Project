@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "./UserQuestions.css";
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui.css";
@@ -19,18 +19,6 @@ function UserQuestions() {
 
     const navigate = useNavigate();
 
-    // const submitQuestions = () => {
-    //     navigate("/pages/FeelingsDesc");
-    // }
-
-    // console.log(localStorage.getItem("currentmood"));
-
-    // function SaveDiaryEntry(){
-    //     const user = JSON.parse(sessionStorage.getItem('user'));
-    //     const userId = user.userId;
-    //     console.log(userId);
-    // }
-
     const surveyJson = {
 
         pages: [{
@@ -45,7 +33,7 @@ function UserQuestions() {
                     { value: 3, text: "Bad" },
                     { value: 4, text: "Very Bad" }
                 ],
-                isRequired: false
+                isRequired: true
             }]
         },{
             elements: [{
@@ -57,9 +45,10 @@ function UserQuestions() {
                     { value: 1, text: "Study/Go to College" },
                     { value: 2, text: "Spend Time Doing Something You Enjoy (Hobby)" },
                     { value: 3, text: "Work" },
-                    { value: 4, text: "Spend Time With Family/Friends/Significant Other" }
+                    { value: 4, text: "Spend Time With Family/Friends/Significant Other" },
+                    { value: 5, text: "Other" }
                 ],
-                isRequired: false
+                isRequired: true
             }]
         }, {
             elements: [{
@@ -71,15 +60,17 @@ function UserQuestions() {
                     { value: 1, text: "Spending Time Doing Something You Enjoy (Hobby)" },
                     { value: 2, text: "Exercising" },
                     { value: 3, text: "Being productive (work,college, at home)" },
-                    { value: 4, text: "Sleeping Well/Eating Well/Focusing On Your Health" }
+                    { value: 4, text: "Sleeping Well/Eating Well/Focusing On Your Health" },
+                    { value: 5, text: "Other" }
                 ],
-                isRequired: false
+                isRequired: true
             }]
         }, {
             elements: [{
                 name: "daily-positive-extra",
                 title: "Feel free to talk about your positives today?",
                 type: "comment",
+                isRequired: true,
             }],
         }, {
             elements: [{
@@ -87,19 +78,21 @@ function UserQuestions() {
                 title: "Which one of the following contributed negatively to your mood today?",
                 type: "radiogroup",
                 choices: [
-                    { value: 0, text: "Spending Time With Family/Friends/Significant Other" },
-                    { value: 1, text: "Spending Time Doing Something You Enjoy (Hobby)" },
-                    { value: 2, text: "Exercising" },
-                    { value: 3, text: "Being productive (work,college, at home)" },
-                    { value: 4, text: "Sleeping Well/Eating Well/Focusing On Your Health" }
+                    { value: 0, text: "Work" },
+                    { value: 1, text: "Stress in College (assignments, commuting, deadlines)" },
+                    { value: 2, text: "Procrastinating" },
+                    { value: 3, text: "Lack of Sleep" },
+                    { value: 4, text: "Money Issues" },
+                    { value: 5, text: "Other" }
                 ],
-                isRequired: false
+                isRequired: true
             }]
         }, {
             elements: [{
                 name: "daily-negative-extra",
                 title: "Feel free to talk about your negatives today?",
                 type: "comment",
+                isRequired: true,
             }],
         }, {
             elements: [{
@@ -108,7 +101,8 @@ function UserQuestions() {
                 type: "datepicker",
                 inputType: "date",
                 dateFormat: "mm/dd/yy",
-                isRequired: false
+                isRequired: true,
+                value: new Date()
             }],
         }]
     };
@@ -142,7 +136,7 @@ function UserQuestions() {
             })
             .then(function (response) 
             {
-                navigate("/pages/FeelingsDesc");
+                navigate("/pages/HomePage");
             })
             .catch(function (error) 
             {

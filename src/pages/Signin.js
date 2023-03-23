@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { React, useState, useEffect } from 'react';
 import "./signin.css";
 import axios from 'axios';
@@ -23,20 +23,27 @@ function SignIn() {
     }
   }
 
+
   function Submit() {
+    var regularExpression = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+    var matchRegex = regularExpression.test(password);
+    if(regularExpression.test(password) && name.length >= 6 && email.length >= 6 ){
     axios.post("http://localhost:8000/SignUp", {
       "Name": name,
       "Email": email,
       "Password": password
     })
       .then(function (response) {
-        console.log("success!")
+        alert("Congratulations, your account has been created successfully! You will now be automatically redirected to the landing page. Please note that in order to access your account, you will need to log in using the login credentials associated with the account you have just created.")
+        navigate("..");
       })
       .catch(function (error) {
         console.log(error);
       });
-
-    navigate("..");
+    }
+    else{
+      alert("One of the inputs you entered is invalid, please try again!")
+    }
   }
 
   const [name, setName] = useState('');
@@ -119,33 +126,19 @@ function SignIn() {
     }
   }, []);
 
-  // function ValidateEmail(inputText) {
-  //   var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-  //   if (inputText.value.match(mailformat)) {
-  //     alert("You have entered a valid email address!");    //The pop up alert for a valid email address
-  //     document.form1.text1.focus();
-  //     return true;
-  //   }
-  //   else {
-  //     alert("You have entered an invalid email address!");    //The pop up alert for an invalid email address
-  //     document.form1.text1.focus();
-  //     return false;
-  //   }
-  // }
-
   return (
 
-    <div onload='document.form1.text1.focus()'>
+    <div>
       <h1 className='pageContent'>Create An Account!</h1>
       <div className='container'>
         <label><b>Full Name</b>
-          <input className='inputBox' type="text" id="Name" onChange={handleChange} />
+          <input className='inputBox' type="text" id="Name" onChange={handleChange} placeholder="Example: David James" required = "required"/>
         </label>
         <label><b>Email</b>
-          <input className='inputBox' type="text" id="Email" onChange={handleChange} />
+          <input className='inputBox' type="text" name='text1' id="Email" onChange={handleChange} placeholder="Example: emailexample@email.com" required = "required"/>
         </label>
         <label><b>Password</b>
-          <input className='inputBox' type="password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onChange={handleChange} title='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters' required />
+          <input className='inputBox' type="password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onChange={handleChange} placeholder='Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters' required = "required" />
         </label>
         <input type="checkbox" onClick={showPassword}/>Show Password
 
@@ -155,7 +148,7 @@ function SignIn() {
       <div id="message">
         <h3>Password must contain the following:</h3>
         <p id="letter" className="invalid">A <b>lowercase</b> letter</p>
-        <p id="capital" className="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="capital" className="invalid">A <b>uppercase</b> letter</p>
         <p id="number" className="invalid">A <b>number</b></p>
         <p id="length" className="invalid">Minimum <b>8 characters</b></p>
       </div>
