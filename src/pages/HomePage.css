@@ -31,17 +31,6 @@
     text-decoration: none;
   }
     
-  /* CSS */
-  /* .button-1 {
-    background-color: black;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    height: 40px;
-    transform: translateY(50%);
-    margin-right: 10px;
-  } */
-  
   .button-words1,
   .button-words2{
     border-radius: 10px;
@@ -60,16 +49,7 @@
   .button-words2{
     background-color: rgb(41, 255, 41);
   }
-  /* .button-words3{
-    background-color: rgb(255, 205, 112);
-  }
-  .button-words4{
-    background-color: rgb(255, 102, 46);
-  }
-  .button-words5{
-    background-color: red;
-  } */
-  
+
   .button-1:hover,
   .button-1:focus,
   .button-2:hover,
@@ -92,22 +72,6 @@
     border-color:black;
     width: 100px;
   }
-  
-  /* .submit{
-    border-radius: 10px;
-    padding: 10px 30px;
-    font-size: 20px;
-    color: black;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    background-color: lightblue;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-  } */
 
   .logoName{
     text-align: center;
@@ -152,14 +116,6 @@
   font-size: 17px;
   margin-right: 10px;
 }
-
-/* .topnav a:hover {
-  color: black;
-} */
-
-/* .topnav a.active {
-  color: white;
-} */
 
 .userFeelings{
   width: 50%;

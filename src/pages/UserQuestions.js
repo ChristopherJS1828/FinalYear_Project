@@ -1,9 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import "./UserQuestions.css";
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui.css";
-import React, { useState, useEffect, useCallback } from 'react';
-import { getUser, removeUserSession } from '../Utils/Common';
+import React, { useCallback } from 'react';
 import "survey-core/defaultV2.min.css";
 import { StylesManager, Model } from "survey-core";
 import * as SurveyCore from "survey-core";

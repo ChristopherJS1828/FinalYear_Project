@@ -86,11 +86,16 @@ function MoodEntries() {
           <tr>
             <th>Date Of Entry</th>
             <th>Current Mood</th>
-            <th>Activities</th>
-            <th>Positives</th>
-            <th>Day</th>
-            <th>Negatives</th>
-            <th>Day Talk</th>
+            <th>What I Did Today</th>
+            <th>Positive Contribution
+              <br></br>To My Mood
+            </th>
+            <th>About My Day 
+              <br></br>Regarding Positives</th>
+            <th>Negative Contribution 
+              <br></br>To My Mood</th>
+            <th>About My Day 
+              <br></br>Regarding Negatives</th>
           </tr>
           <tbody>
             {moods && moods.map(mood =>

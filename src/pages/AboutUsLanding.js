@@ -50,7 +50,7 @@ function AboutUsLanding() {
           <br></br>
         At Meraki, we offer two unique features to help you take control of your mental health and wellbeing. The
         first feature is our Diary Entry Section, which provides a safe and confidential space for you to reflect
-        on your thoughts and feelings. Writing down your emotions can be a powerful way to increase self-awareness
+        on your thoughts and feelings. Writing down your emotions can be a powerful way to increase self-awareness,
         reduce stress, and manage difficult emotions. Our Diary Entry Section is designed to be user-friendly and
         accessible, and we believe it can be an effective tool for anyone looking to improve their mental health.
         <br></br>

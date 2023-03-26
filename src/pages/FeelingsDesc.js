@@ -82,7 +82,7 @@ function FeelingsDesc() {
       </div>
 
       
-        <h2 className='userFeel-q'>Feel free to tell us all about your day </h2>
+        <h2 className='diaryentry-header'>Feel free to tell us all about your day </h2>
         <div>
           <textarea className="form-control" id="DiaryEntry" placeholder="Tell us a little more about today :) What made you happy today? What upset you today?" 
           maxLength="3000" rows="10" cols="55" onChange={handleChange}></textarea> 

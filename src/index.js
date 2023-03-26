@@ -1,10 +1,6 @@
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap.bundle.min';
-import $ from 'jquery';
-import Popper from 'popper.js';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes, Link, useNavigate, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import SignIn from './pages/Signin';
@@ -13,10 +9,6 @@ import HomePage from './pages/HomePage'
 import FeelingsDesc from './pages/FeelingsDesc';
 import UserQuestions from './pages/UserQuestions';
 import Services from './pages/Services';
-import PrivateRoute from './Utils/PrivateRoute';
-import PublicRoute from './Utils/PublicRoute';
-import { getToken, removeUserSession, setUserSession } from './Utils/Common';
-import axios from 'axios';
 import MoodHistory from './pages/MoodHistory';
 import AboutUs from './pages/AboutUs';
 import AboutUsLanding from './pages/AboutUsLanding'
@@ -82,38 +74,4 @@ root.render(
     <Route path="/pages/AboutUsLanding" element={<UnProtectedRoute><AboutUsLanding /></UnProtectedRoute>}></Route>
   </Routes>
 </BrowserRouter>
-
-/* <React.StrictMode>
-        <Router>
-          <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/pages/Signin" element={<SignIn />} />
-            <Route path="/pages/Login" element={<LogIn />} />
-            {userLogged ? (<Route path={"/pages/HomePage"} element={<HomePage />} />) : (<Route path={"/home"} element={<LogIn />} />)}
-          </Routes>
-        </Router>
-</React.StrictMode> */
-  
-
-  // <BrowserRouter>
-
-  // <React.StrictMode>
-
-  // <Routes>
-  //       <Route index element={<App />} />
-  //       <Route path="/pages/Signin" element={<SignIn />} />
-  //       {/* <Route path="/pages/Login" element={
-  //         <PublicRoute><LogIn /></PublicRoute>
-  //         }/> */}
-  //       <Route  path="/pages/Login" element={<LogIn />} />
-  //       {/* <Route path="/pages/Homepage" element={
-  //         <PrivateRoute><HomePage /></PrivateRoute>
-  //         }/> */}
-  //       <Route  path="/pages/HomePage" element={<HomePage />} />
-
-  //     </Routes>
-
-  // </React.StrictMode>
-
-  // </BrowserRouter>
 );
