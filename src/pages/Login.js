@@ -34,13 +34,13 @@ function LogIn() {
     setLoading(true);
 
     // if statement that checks credentials have been inputted
-    if(email.value.length === 0 || password.value.length === 0) alert("Please Enter Your Details To Login")
+    if (email.value.length === 0 || password.value.length === 0) alert("Please Enter Your Details To Login")
 
     //posts users email and password to database
     axios.post('http://localhost:8000/Login', { email: email.value, password: password.value }).then(response => {
       setLoading(false);
       setUserSession(response.data.token, response.data.existingUser);//compares users details with exisiting User
-      navigate("/pages/HomePage" );
+      navigate("/pages/HomePage");
       //if credentials are wrong....
     }).catch(error => {
       setLoading(false);

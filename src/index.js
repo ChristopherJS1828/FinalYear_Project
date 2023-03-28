@@ -60,18 +60,18 @@ const isUserLogged = () => {
 root.render(
 
   <BrowserRouter>
-  <Routes>
-    <Route index path="/" element={<App />}></Route>
-    <Route path="/pages/Signin" element={<UnProtectedRoute><SignIn /></UnProtectedRoute>}></Route>
-    <Route path="/pages/Login" element={<UnProtectedRoute><LogIn /></UnProtectedRoute>}></Route>
-    <Route path="/pages/HomePage" element={<ProtectedRoute><HomePage /></ProtectedRoute>}></Route>
-    <Route path="/pages/FeelingsDesc" element={<ProtectedRoute><FeelingsDesc /></ProtectedRoute>}></Route>
-    <Route path="/pages/UserQuestions" element={<ProtectedRoute><UserQuestions /></ProtectedRoute>}></Route>
-    <Route path="/pages/Services" element={<ProtectedRoute><Services /></ProtectedRoute>}></Route>
-    <Route path="/pages/MoodHistory" element={<ProtectedRoute><MoodHistory /></ProtectedRoute>}></Route>
-    <Route path="/pages/MoodEntries" element={<ProtectedRoute><MoodEntries /></ProtectedRoute>}></Route>
-    <Route path="/pages/AboutUs" element={<ProtectedRoute><AboutUs /></ProtectedRoute>}></Route>
-    <Route path="/pages/AboutUsLanding" element={<UnProtectedRoute><AboutUsLanding /></UnProtectedRoute>}></Route>
-  </Routes>
-</BrowserRouter>
+    <Routes>
+      <Route index path="/" element={<App />}></Route>
+      <Route path="/pages/Signin" element={<UnProtectedRoute><SignIn /></UnProtectedRoute>}></Route>
+      <Route path="/pages/Login" element={<UnProtectedRoute><LogIn /></UnProtectedRoute>}></Route>
+      <Route path="/pages/HomePage" element={<ProtectedRoute><HomePage /></ProtectedRoute>}></Route>
+      <Route path="/pages/FeelingsDesc" element={<ProtectedRoute><FeelingsDesc /></ProtectedRoute>}></Route>
+      <Route path="/pages/UserQuestions" element={<ProtectedRoute><UserQuestions /></ProtectedRoute>}></Route>
+      <Route path="/pages/Services" element={<ProtectedRoute><Services /></ProtectedRoute>}></Route>
+      <Route path="/pages/MoodHistory" element={<ProtectedRoute><MoodHistory /></ProtectedRoute>}></Route>
+      <Route path="/pages/MoodEntries" element={<ProtectedRoute><MoodEntries /></ProtectedRoute>}></Route>
+      <Route path="/pages/AboutUs" element={<ProtectedRoute><AboutUs /></ProtectedRoute>}></Route>
+      <Route path="/pages/AboutUsLanding" element={<UnProtectedRoute><AboutUsLanding /></UnProtectedRoute>}></Route>
+    </Routes>
+  </BrowserRouter>
 );

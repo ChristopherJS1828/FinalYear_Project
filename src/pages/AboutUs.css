@@ -1,70 +1,70 @@
-.header{
-    background: lightblue;
-    height: 85px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem calc();
-    z-index: 12;
-  }
-  
-  .logoHeader{
-    display: flex;
-  }
+.header {
+  background: lightblue;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem calc();
+  z-index: 12;
+}
 
-  .buttons-link{
-    margin-left: auto;
-    margin-right: auto;
-  }
+.logoHeader {
+  display: flex;
+}
 
-  .content{
-    text-align: center;
-    /* display: flex;
-    justify-content: space-between; */
-    padding: 15px;
-  }
-  
-  .aboutus-header{
-    text-align: left;
-    text-decoration: underline;
-  }
+.buttons-link {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  /* CSS */
-  .button-1 {
-    background-color: black;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    height: 40px;
-    transform: translateY(50%);
-    margin-right: 10px;
-  }
-  
-  .button-2 {
-    background-color: black;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    height: 40px;
-    transform: translateY(50%);
-    margin-right: 10px;
-  }
-  
-  .button-1:hover,
-  .button-1:focus,
-  .button-2:hover,
-  .button-2:focus {
-    background-color: #4b4848;
-  }
-  .logoName{
-    text-align: center;
-    text-decoration: underline;
-  }
+.content {
+  text-align: center;
+  padding: 15px;
+}
 
- .topnav {
+.aboutus-header {
+  text-align: left;
+  text-decoration: underline;
+}
+
+/* CSS */
+.button-1 {
+  background-color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  transform: translateY(50%);
+  margin-right: 10px;
+}
+
+.button-2 {
+  background-color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  transform: translateY(50%);
+  margin-right: 10px;
+}
+
+.button-1:hover,
+.button-1:focus,
+.button-2:hover,
+.button-2:focus {
+  background-color: #4b4848;
+}
+
+.logoName {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.topnav {
   display: flex;
   text-align: center;
   padding: 15px;
 }
+
 .topnav a {
   color: black;
   padding: 14px 16px;
@@ -72,7 +72,7 @@
   margin-right: 10px;
 }
 
-.logOutbtn1{
+.logOutbtn1 {
   background-color: black;
   border-radius: 8px;
   cursor: pointer;
@@ -141,21 +141,21 @@
   cursor: auto;
 }
 
-.aboutus-image{
+.aboutus-image {
   max-width: 400px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   border: 2px solid black;
-  
+
 }
 
-.meraki-meaning1{
+.meraki-meaning1 {
   text-align: center;
   font-size: medium;
 }
 
-.medi-meaning{
+.medi-meaning {
   font-size: medium;
   text-align: center;
 }
@@ -166,23 +166,23 @@ p::first-line {
   text-decoration: underline;
 }
 
-.aboutus-body{
+.aboutus-body {
   border: 2px solid black;
   float: left;
   background-color: lightblue;
 }
 
-.aboutus-bodyright{
+.aboutus-bodyright {
   border: 2px solid black;
   float: right;
   background-color: lightblue;
 }
 
-.ul{
+.ul {
   display: flex;
   justify-content: space-evenly;
 }
 
-.page-container{
+.page-container {
   min-width: 500px;
 }

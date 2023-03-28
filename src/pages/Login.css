@@ -1,42 +1,42 @@
 .container {
-    padding: 16px;
-  }
+  padding: 16px;
+}
 
-.inputBox{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
+.inputBox {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
-  .loginbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
+.loginbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
-  .psw {
-    float: right;
-  }
+.psw {
+  float: right;
+}
 
-  .cancelbtn{
-    border-radius: 10px;
-    background: red;
-    padding: 10px 30px;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-  }
+.cancelbtn {
+  border-radius: 10px;
+  background: red;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
 
-  .pageHeader{
-    text-align: center;
-  }
+.pageHeader {
+  text-align: center;
+}

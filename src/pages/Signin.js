@@ -27,21 +27,21 @@ function SignIn() {
   function Submit() {
     var regularExpression = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
     var matchRegex = regularExpression.test(password);
-    if(regularExpression.test(password) && name.length >= 6 && email.length >= 6 ){
-    axios.post("http://localhost:8000/SignUp", {
-      "Name": name,
-      "Email": email,
-      "Password": password
-    })
-      .then(function (response) {
-        alert("Congratulations, your account has been created successfully! You will now be automatically redirected to the landing page. Please note that in order to access your account, you will need to log in using the login credentials associated with the account you have just created.")
-        navigate("..");
+    if (regularExpression.test(password) && name.length >= 6 && email.length >= 6) {
+      axios.post("http://localhost:8000/SignUp", {
+        "Name": name,
+        "Email": email,
+        "Password": password
       })
-      .catch(function (error) {
-        console.log(error);
-      });
+        .then(function (response) {
+          alert("Congratulations, your account has been created successfully! You will now be automatically redirected to the landing page. Please note that in order to access your account, you will need to log in using the login credentials associated with the account you have just created.")
+          navigate("..");
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     }
-    else{
+    else {
       alert("One of the inputs you entered is invalid, please try again!")
     }
   }
@@ -132,15 +132,15 @@ function SignIn() {
       <h1 className='pageContent'>Create An Account!</h1>
       <div className='container'>
         <label><b>Full Name</b>
-          <input className='inputBox' type="text" id="Name" onChange={handleChange} placeholder="Example: David James" required = "required"/>
+          <input className='inputBox' type="text" id="Name" onChange={handleChange} placeholder="Example: David James" required="required" />
         </label>
         <label><b>Email</b>
-          <input className='inputBox' type="text" name='text1' id="Email" onChange={handleChange} placeholder="Example: emailexample@email.com" required = "required"/>
+          <input className='inputBox' type="text" name='text1' id="Email" onChange={handleChange} placeholder="Example: emailexample@email.com" required="required" />
         </label>
         <label><b>Password</b>
-          <input className='inputBox' type="password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onChange={handleChange} placeholder='Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters' required = "required" />
+          <input className='inputBox' type="password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onChange={handleChange} placeholder='Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters' required="required" />
         </label>
-        <input type="checkbox" onClick={showPassword}/>Show Password
+        <input type="checkbox" onClick={showPassword} />Show Password
 
         <button className='signupbtn' type="submit" onClick={Submit}>Sign Up</button>
       </div>

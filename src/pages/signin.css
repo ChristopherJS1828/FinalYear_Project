@@ -1,49 +1,49 @@
 .container {
-    padding: 16px;
-  }
+  padding: 16px;
+}
 
-.inputBox{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
+.inputBox {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
-  .signupbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
+.signupbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
-  .pageContent{
-    text-align: center;
-  }
+.pageContent {
+  text-align: center;
+}
 
-  .psw {
-    float: right;
-  }
+.psw {
+  float: right;
+}
 
-  .cancelbtn{
-    border-radius: 10px;
-    background: red;
-    padding: 10px 30px;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-  }
+.cancelbtn {
+  border-radius: 10px;
+  background: red;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
 
 /* The message box is shown when the user clicks on the password field */
 #message {
-  display:none;
+  display: none;
   background: #f1f1f1;
   color: #000;
   position: relative;

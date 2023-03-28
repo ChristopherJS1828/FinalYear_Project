@@ -90,11 +90,11 @@ function MoodEntries() {
             <th>Positive Contribution
               <br></br>To My Mood
             </th>
-            <th>About My Day 
+            <th>About My Day
               <br></br>Regarding Positives</th>
-            <th>Negative Contribution 
+            <th>Negative Contribution
               <br></br>To My Mood</th>
-            <th>About My Day 
+            <th>About My Day
               <br></br>Regarding Negatives</th>
           </tr>
           <tbody>

@@ -1,4 +1,4 @@
-.header-landing{
+.header-landing {
   background: lightblue;
   height: 85px;
   display: flex;
@@ -7,10 +7,10 @@
   z-index: 12;
   overflow: hidden;
   white-space: nowrap;
-  
+
 }
 
-.time-header{
+.time-header {
   display: flex;
 }
 
@@ -49,12 +49,13 @@
 .button-login:focus {
   background-color: #4b4848;
 }
-.logoName{
+
+.logoName {
   text-align: center;
   text-decoration: underline;
 }
 
-.body-image{
+.body-image {
   max-width: 320px;
   display: flex;
   margin-right: auto;
@@ -64,7 +65,7 @@
   background-color: lightblue;
 }
 
-.aboutus{
+.aboutus {
   max-width: 350px;
   display: flex;
   margin-right: auto;
@@ -75,32 +76,32 @@
   cursor: pointer;
 }
 
-.body-content{
+.body-content {
   border-radius: 10px;
   padding: .5em;
   text-align: center;
 }
 
-.body-content2{
+.body-content2 {
   border-radius: 10px;
   padding: .5em;
   text-align: center;
 }
 
-.below-header{
+.below-header {
   padding: 10px;
 }
 
-.body{
+.body {
   display: flex;
   justify-content: center;
 }
 
-.whole-page{
+.whole-page {
   border: 5px solid black;
 }
 
-.gap{
+.gap {
   width: 99.85%;
   border: 3px solid black;
   background-color: lightblue;
@@ -126,20 +127,21 @@ ul {
   list-style: none;
   justify-content: space-evenly;
 }
-.quote{
+
+.quote {
   font-family: Segoe Script;
   text-align: center;
 }
 
 /* styling done on information provided on landing page */
-.landing-aboutus{
+.landing-aboutus {
   font-size: large;
   font-weight: bold;
   text-align: center;
 }
 
 /* styling done on information provided on landing page */
-.landing-aboutus-interactive{
+.landing-aboutus-interactive {
   font-size: large;
   font-weight: bold;
   text-align: center;
@@ -147,22 +149,22 @@ ul {
 }
 
 /* styling done on pictures shown in the information section on the landing page */
-.infopic{
+.infopic {
   width: 100px;
 }
 
 /* styling done on pictures shown in the information section on the landing page */
-.infopic-interactive{
+.infopic-interactive {
   width: 100px;
   cursor: pointer;
 }
 
-.time{
+.time {
   font-size: larger;
   transform: translateY(25%);
   font-weight: bold;
 }
 
-.page-container{
+.page-container {
   min-width: 500px;
 }

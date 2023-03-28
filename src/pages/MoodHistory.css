@@ -1,10 +1,10 @@
-.table{
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+.table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.table th{
+.table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -16,25 +16,26 @@
   font-weight: bold;
 }
 
-.table td, .table th{
+.table td,
+.table th {
   border: 2px solid black;
   padding: 8px;
 }
 
-.page-container{
+.page-container {
   min-width: 765px;
 }
 
 
-.wrapper{
-    padding: 10px;
+.wrapper {
+  padding: 10px;
 }
 
-.logoHeader{
+.logoHeader {
   cursor: pointer;
 }
 
-.logOutbtn{
+.logOutbtn {
   background-color: black;
   border-radius: 8px;
   cursor: pointer;
@@ -53,7 +54,7 @@
   text-decoration: none;
 }
 
-.entryOption{
+.entryOption {
   background-color: black;
   border-radius: 8px;
   cursor: pointer;
@@ -74,7 +75,7 @@
   float: right;
 }
 
-.welcome-message{
+.welcome-message {
   text-decoration: underline;
   text-align: left;
 }

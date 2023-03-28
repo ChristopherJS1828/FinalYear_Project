@@ -1,74 +1,87 @@
-.header{
-    background: lightblue;
-    height: 85px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem calc();
-    z-index: 12;
-  }
-  
-  .logoHeader{
-    display: flex;
-  }
-  
-  /* CSS */
-  .button-1 {
-    background-color: black;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    height: 40px;
-    transform: translateY(50%);
-    margin-right: 10px;
-  }
-  
-  .button-2 {
-    background-color: black;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    height: 40px;
-    transform: translateY(50%);
-    margin-right: 10px;
-  }
-  
-  .button-1:hover,
-  .button-1:focus,
-  .button-2:hover,
-  .button-2:focus {
-    background-color: #4b4848;
-  }
-  .logoName{
-    text-align: center;
-    text-decoration: underline;
-  }
+.header {
+  background: lightblue;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem calc();
+  z-index: 12;
+}
 
- .form-control{
-    justify-content: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding:10px;
-    margin: 0 auto 10px; 
-    border:solid 2px black ;font-size:20px;
-    font-family:'Montserrat Alternates';
-    border-radius:10px;outline: none;
-    transition: box-shadow .3s ease
- }
+.logoHeader {
+  display: flex;
+}
 
- .form-control:-ms-input-placeholder {color: black}
- .form-control::-moz-placeholder {color: black}
- .form-control::-webkit-input-placeholder {color: lightblue}
+/* CSS */
+.button-1 {
+  background-color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  transform: translateY(50%);
+  margin-right: 10px;
+}
 
- /* .form-control:focus{2px solid #2d303a91} */
- .form-control:focus,
- .form-control:hover{box-shadow:0px 0px 13px 0px lightblue}
+.button-2 {
+  background-color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  transform: translateY(50%);
+  margin-right: 10px;
+}
 
- .topnav {
+.button-1:hover,
+.button-1:focus,
+.button-2:hover,
+.button-2:focus {
+  background-color: #4b4848;
+}
+
+.logoName {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.form-control {
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  margin: 0 auto 10px;
+  border: solid 2px black;
+  font-size: 20px;
+  font-family: 'Montserrat Alternates';
+  border-radius: 10px;
+  outline: none;
+  transition: box-shadow .3s ease
+}
+
+.form-control:-ms-input-placeholder {
+  color: black
+}
+
+.form-control::-moz-placeholder {
+  color: black
+}
+
+.form-control::-webkit-input-placeholder {
+  color: lightblue
+}
+
+.form-control:focus,
+.form-control:hover {
+  box-shadow: 0px 0px 13px 0px lightblue
+}
+
+.topnav {
   display: flex;
   text-align: center;
   padding: 15px;
 }
+
 .topnav a {
   color: black;
   padding: 14px 16px;
@@ -76,7 +89,7 @@
   margin-right: 10px;
 }
 
-.logOutbtn1{
+.logOutbtn1 {
   background-color: black;
   border-radius: 8px;
   cursor: pointer;
@@ -95,12 +108,12 @@
   text-decoration: none;
 }
 
-.diaryentry-header{
+.diaryentry-header {
   text-align: center;
   text-decoration: underline;
 }
 
-.saveDiaryEntry{
+.saveDiaryEntry {
   border-radius: 10px;
   padding: 10px 30px;
   font-size: 20px;
@@ -113,7 +126,7 @@
   background-color: lightblue;
   text-align: center;
   justify-content: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

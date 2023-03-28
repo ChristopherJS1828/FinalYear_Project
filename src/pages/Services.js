@@ -23,10 +23,6 @@ function Services() {
     navigate("/pages/MoodHistory");
   }
 
-  const diaryEntry = () => {
-    navigate("/pages/FeelingsDesc");
-  }
-
   const aboutUs = () => {
     navigate("/pages/AboutUs");
   }
@@ -53,7 +49,7 @@ function Services() {
         <div className='logoHeader'>
           <img src={logo} onClick={feelingspage}></img>
         </div>
-        
+
         <h1>Services We Provide!</h1>
 
         <div className='topnav'>
@@ -68,13 +64,13 @@ function Services() {
           <button className='linkBtn' onClick={openTab} >Listen to Music</button>
         </div>
         <div className='content-services'>
-            <button className='linkBtn' onClick={openTab1} >Consult a Professional</button>
+          <button className='linkBtn' onClick={openTab1} >Consult a Professional</button>
         </div>
         <div className='content-services'>
-            <button className='linkBtn' onClick={openTab2} >College Student Support</button>
+          <button className='linkBtn' onClick={openTab2} >College Student Support</button>
         </div>
         <div className='content-services'>
-            <button className='linkBtn' onClick={openTab3} >24/7 Hotline Support</button>
+          <button className='linkBtn' onClick={openTab3} >24/7 Hotline Support</button>
         </div>
         <div className='content-services'>
           <button className='linkBtn' onClick={aboutUs}>About Us</button>

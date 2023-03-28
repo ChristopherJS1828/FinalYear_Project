@@ -63,22 +63,22 @@ const App = () => {
             <li className='li'>
               <img className='infopic-interactive' src={info} onClick={AboutUs}></img>
               <p className='landing-aboutus-interactive' onClick={AboutUs}>About Us!</p>
-              Hey there! Welcome to Meraki! Meraki is a website 
+              Hey there! Welcome to Meraki! Meraki is a website
               <br></br>
-              that provides support to people who are dealing with 
+              that provides support to people who are dealing with
               <br></br>
-              mental health issues. It's a safe space where you can 
+              mental health issues. It's a safe space where you can
               <br></br>
               openly talk about your problems and find the help you need.
             </li>
             <li className='li'>
               <img className='infopic' src={services}></img>
               <p className='landing-aboutus'>Services We Provide!</p>
-              First, you can use a diary entry to record how 
+              First, you can use a diary entry to record how
               <br></br>
-              you're feeling. This is a great way to express 
+              you're feeling. This is a great way to express
               <br></br>
-              yourself and track your progress over time. 
+              yourself and track your progress over time.
               <br></br>
               Second, you can take a brief survey that asks about
               <br></br>
@@ -89,19 +89,16 @@ const App = () => {
             <li className='li'>
               <img className='infopic-interactive' src={account} onClick={CreateAccount}></img>
               <p className='landing-aboutus-interactive' onClick={CreateAccount}>Join Us!</p>
-              Take the first step towards a better mental 
+              Take the first step towards a better mental
               <br></br>
-              health journey and let us support you every 
+              health journey and let us support you every
               <br></br>
               step of the way. Join us now!
 
             </li>
           </ul>
-
         </div>
-
       </div>
-
     </div>
 
   );

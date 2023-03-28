@@ -33,7 +33,7 @@ function UserQuestions() {
                 ],
                 isRequired: true
             }]
-        },{
+        }, {
             elements: [{
                 name: "daily-activity",
                 title: "Which one of the following activites did you do today?",
@@ -110,34 +110,32 @@ function UserQuestions() {
 
     const alertResults = useCallback((sender) => {
         const results = JSON.stringify(sender.data);
-            
-            const surveyData = JSON.parse(JSON.stringify(survey.getPlainData()));
 
-
-            
-            const user = JSON.parse(sessionStorage.getItem('user'));
-            const userId = user.userId;
+        const surveyData = JSON.parse(JSON.stringify(survey.getPlainData()));
 
 
 
-            let numOfQ = 7;
-            let questionnaireData = {}
-            console.log(survey.getPlainData());
-            for(let i = 0; i < numOfQ; i++){
-                questionnaireData[i] = surveyData[i].displayValue;
-            }
+        const user = JSON.parse(sessionStorage.getItem('user'));
+        const userId = user.userId;
 
-            questionnaireData["UserId"] = userId;
 
-            axios
-            .post("http://localhost:8000/UserQuestions",questionnaireData,{
+
+        let numOfQ = 7;
+        let questionnaireData = {}
+        console.log(survey.getPlainData());
+        for (let i = 0; i < numOfQ; i++) {
+            questionnaireData[i] = surveyData[i].displayValue;
+        }
+
+        questionnaireData["UserId"] = userId;
+
+        axios
+            .post("http://localhost:8000/UserQuestions", questionnaireData, {
             })
-            .then(function (response) 
-            {
+            .then(function (response) {
                 navigate("/pages/HomePage");
             })
-            .catch(function (error) 
-            {
+            .catch(function (error) {
                 console.log(error);
             });
 

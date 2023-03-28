@@ -1,89 +1,93 @@
-.page-container{
+.page-container {
   min-width: 765px;
 }
 
-.header{
-    background: lightblue;
-    height: 85px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem calc();
-    z-index: 12;
-    white-space: nowrap;
-  }
-
-  .logOutbtn{
-    background-color: black;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    height: 40px;
-    transform: translateY(20%);
-    margin-right: 10px;
-    border-radius: 10px;
-    background: black;
-    padding: 10px 30px;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-  }
-    
-  .button-words1,
-  .button-words2{
-    border-radius: 10px;
-    padding: 10px 30px;
-    font-size: 20px;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-  }
-  .button-words1{
-    background-color: green;
-  }
-  .button-words2{
-    background-color: rgb(41, 255, 41);
-  }
-
-  .button-1:hover,
-  .button-1:focus,
-  .button-2:hover,
-  .button-2:focus {
-    background-color: #4b4848;
-  }
-
-  .diary-entry,
-  .mood-entry{
-    border: 3px solid;
-    border-radius: 10%;
-    padding: 30px 30px;
-    cursor: pointer;
-  }
-  .diary-entry{
-    border-color: black;
-    width: 100px;
-  }
-  .mood-entry{
-    border-color:black;
-    width: 100px;
-  }
-
-  .logoName{
-    text-align: center;
-    text-decoration: underline;
-  }
-
-  .logoHeader{
+.header {
+  background: lightblue;
+  height: 85px;
   display: flex;
-  text-align: center ;
+  justify-content: space-between;
+  padding: 0.2rem calc();
+  z-index: 12;
+  white-space: nowrap;
 }
 
-.content{
+.logOutbtn {
+  background-color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  transform: translateY(20%);
+  margin-right: 10px;
+  border-radius: 10px;
+  background: black;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.button-words1,
+.button-words2 {
+  border-radius: 10px;
+  padding: 10px 30px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.button-words1 {
+  background-color: green;
+}
+
+.button-words2 {
+  background-color: rgb(41, 255, 41);
+}
+
+.button-1:hover,
+.button-1:focus,
+.button-2:hover,
+.button-2:focus {
+  background-color: #4b4848;
+}
+
+.diary-entry,
+.mood-entry {
+  border: 3px solid;
+  border-radius: 10%;
+  padding: 30px 30px;
+  cursor: pointer;
+}
+
+.diary-entry {
+  border-color: black;
+  width: 100px;
+}
+
+.mood-entry {
+  border-color: black;
+  width: 100px;
+}
+
+.logoName {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.logoHeader {
+  display: flex;
+  text-align: center;
+}
+
+.content {
   text-align: center;
   padding: 25px;
   border-radius: 10px;
@@ -95,12 +99,12 @@
   text-decoration: underline;
 }
 
-.content-q{
+.content-q {
   text-align: center;
   text-decoration: underline;
 }
 
-.feelings{
+.feelings {
   margin-left: auto;
   margin-right: auto;
 }
@@ -110,6 +114,7 @@
   text-align: center;
   padding: 15px;
 }
+
 .topnav a {
   color: black;
   padding: 14px 16px;
@@ -117,7 +122,7 @@
   margin-right: 10px;
 }
 
-.userFeelings{
+.userFeelings {
   width: 50%;
   margin: auto;
   display: block;
@@ -127,7 +132,7 @@
   box-sizing: border-box;
 }
 
-.record-diary{
+.record-diary {
   border-radius: 10px;
   padding: 10px 30px;
   font-size: 20px;
@@ -140,7 +145,7 @@
   text-decoration: none;
 }
 
-.record-mood{
+.record-mood {
   border-radius: 10px;
   padding: 10px 30px;
   font-size: 20px;
