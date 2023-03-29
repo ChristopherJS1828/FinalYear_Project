@@ -58,7 +58,7 @@ function Services() {
           <button className='logOutbtn1' onClick={handleLogout}>Log Out</button>
         </div>
       </div>
-      <h2 className='services-header'>This page will offer all the services we provide! </h2>
+      <div className='white-gap'></div>
       <div className='buttons-link'>
         <div className='content-services'>
           <button className='linkBtn' onClick={openTab} >Listen to Music</button>

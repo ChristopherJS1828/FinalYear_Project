@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import "./AboutUsLanding.css";
-import logo from '../images/Slogan.png';
+import logo from '../images/website_logo.png';
 import aboutus from '../images/aboutus-image.jpg'
 import React from 'react';
 
